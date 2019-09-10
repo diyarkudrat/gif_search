@@ -5,6 +5,8 @@
 <form action= '/', method='POST'>
 <!-- TODO: Make an HTML form containing a search box and a submit button to add
     the search term to the query string -->
+    <h1>GIF Search!</h1>
+
     <p>
         What gif are you looking for?
         <input type="text" name="Gif">
@@ -19,5 +21,16 @@
 </ul>
 
 <!-- TODO: For each gif, include the 'gif.html' template to display it -->
+  {% if search %}
+    #list all of the GIFs
+
+  {% else %}
+    try again. No GIF could be found
+  {% endif %}
+
+
+  #If no GIF could be found
+  tell user to try again. No GIF could be found
+
 </form>
 {% endblock %}
